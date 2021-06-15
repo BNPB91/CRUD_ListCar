@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crud Cars</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- <nav>
+      <div class="menu">
+        <div class="row space-between">
+          <div class="logo-container">
+            <a href="#"><img src="./assets/Images/logo.png" alt="" /></a>
+          </div>
+          <div class="align-items relative">
+            <div class="visibility">
+              <button>Login</button>
+              <button>Sign Up</button>
+              <<button>Menu</button>
+            </div>
+            <div class="align-items menu-icon absolute">
+              <i class="fas fa-bars icon-style" id="responsive-menu-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="justify-content2">
+          <div class="hidden-menu" id="hidden-menu">
+            <div>
+              <button>Sign Up</button>
+            </div>
+            <div class="justify-content2">
+              <button>Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+
+    <div class="container">
+      <div class="title">
+        <h3 class="titulo">Welcome</h3>
+        <h3 class="subTitle">
+          If you want advice on a special vehicle, leave us your requirements
+          and we will contact you
+          <br />
+          <br />
+          <marquee href="#" class="publicidad" scrollamount="30">
+            >>>> FREE QUOTES <<<<
+          </marquee>
+        </h3>
+      </div>
+
+      <!-- FORMULARIO QUE CONTIENE LOS 3 INPUTS DEL CRUD -->
+      <form action="" id="addUser">
+        <!-- Imput de Nombre -->
+        <div class="addUser">
+          <div class="field">
+            <!-- Texto Superior del Nombre Clave-->
+            <label for="name"><strong>Name: </strong></label>
+            <input type="text" placeholder="Nombre Clave" id="name" />
+          </div>
+          <!-- Texto Superior del AÑO DEL MODELO-->
+          <div class="field">
+            <label for="model"><strong>Model Year: </strong></label>
+            <input type="text" placeholder="Año del Modelo" id="model" />
+          </div>
+          <!-- Texto Superior del NUMERO DE PUERTAS-->
+          <div class="field">
+            <label for="doors"><strong>Doors: </strong></label>
+            <input type="text" placeholder="Numero de Puertas" id="door" />
+          </div>
+
+          <!-- Texto Superior del COLOR-->
+          <div class="field">
+            <label for="color"><strong>Color: </strong></label>
+            <input type="tex" placeholder="Color" id="color" />
+            <!-- <input type="text" placeholder="Color" id="name" /> -->
+          </div>
+          <!-- Imput de MARCA DEL VEHICULO -->
+          <div class="field">
+            <label for="brand"><strong>Brand: </strong></label>
+            <input type="text" placeholder="Marca" id="brand" />
+          </div>
+          <!-- Imput de Email -->
+          <div class="field">
+            <label for="email"><strong>Contact email: </strong></label>
+            <input type="text" placeholder="Correo electrónico" id="email" />
+          </div>
+        </div>
+        <button type="submit" class="submitBtn" id="submitBtn">
+          <strong>Guardar usuario</strong>
+        </button>
+      </form>
+
+      <!-- >>>>>>>> Intento de Titulos  -->
+      <!-- <tr class="header">
+        <th>Name</th>
+        <th>Model Year</th>
+        <th>Doors</th>
+        <th>Color</th>
+        <th>Brand</th>
+        <th>Contact email</th>
+      </tr> -->
+
+      <!-- DIV EN EL QUE MOSTRAREMOS LA LISTA DEL CRUD       -->
+      <div class="userList" id="userList">
+        <table class="form_header" id="form_header"></table>
+      </div>
+    </div>
+    <!-- <script>
+      let session = localStorage.getItem("session");
+      console.log(typeof JSON.parse(session));
+      if (!JSON.parse(session)) {
+        window.location = "index.html";
+      }
+    </script> -->
+    <script src="main.js"></script>
+  </body>
+</html>

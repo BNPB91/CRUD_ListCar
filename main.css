@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+  /* margin: 0;
+  padding: 0; */
+  font-family: "Architects Daughter", cursive;
+  /* font-family: "Architects Daughter", cursive; */
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+/* TÍTULO DE LA APP */
+
+.title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+
+  /* nuevos cambios */
+
+  /* font-family: "Gotham-Book", "Helvetica Neue", sans-serif; */
+  /* font-size: 4rem; */
+}
+
+/* FORMULARIOS PARA AGREGAR USUARIO */
+
+#addUser {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.addUser {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.field {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.field label {
+  margin-bottom: 10px;
+  font-weight: lighter;
+  color: white;
+  border-radius: 5px;
+}
+
+.field input {
+  border: 1px solid #afb5b9;
+  padding: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.submitBtn,
+.updateBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #54b959e8;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+.updateBtn {
+  display: none;
+}
+
+/* LISTA DE USUARIOS */
+
+.userList {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid gray;
+}
+
+.userItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.userInfo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  width: 45%;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
+.update {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Ultimos Cambios */
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #222124,
+    #2f2e32,
+    #3c3c41,
+    #494a50,
+    #565960,
+    #61666d,
+    #6d737a,
+    #798088,
+    #868d96,
+    #939ba4,
+    #a0a9b2,
+    #aeb7c1
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h4 {
+  color: rgb(94, 83, 83);
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>> ANIMACIONES <<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Animacion de Title "CRUD Vanilla JS" */
+
+.publicidad:hover {
+  animation-name: fund_changes_text;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  position: relative;
+}
+
+@keyframes fund_changes_text {
+  0% {
+    color: #051937;
+  }
+
+  25% {
+    color: #a8eb12;
+  }
+  45% {
+    color: #25cfa5;
+  }
+  75% {
+    color: #5ffbf1;
+  }
+  85% {
+    color: rgb(228, 128, 15);
+  }
+  100% {
+    color: rgb(241, 83, 20);
+  }
+}
+
+/* Animacion de Boton "GUARDAR USUARIOS" */
+.submitBtn:hover {
+  animation-name: fund_changes_background;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  position: relative;
+}
+
+.updateBtn:hover {
+  animation-name: fund_changes_background;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  position: relative;
+}
+
+@keyframes fund_changes_background {
+  0% {
+    background-color: rgb(31, 119, 153);
+  }
+  25% {
+    background-color: rgb(189, 98, 98);
+  }
+  75% {
+    background-color: rgb(51, 34, 22);
+  }
+  100% {
+    background-color: rgb(189, 42, 111);
+  }
+}
+
+/* Animacion de Boton "EDITAR" */
+.update:hover {
+  animation-name: fund_changes_background;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  position: relative;
+}
+/* Animacion de Boton "ELIMINAR" */
+.delete:hover {
+  animation-name: fund_changes_background;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  position: relative;
+}
+
+.publicidad {
+  font-size: 5vh;
+  font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+
+.subTitulos {
+  font-size: 3vh;
+  font-family: "Architects Daughter", cursive;
+}
+
+.titulo {
+  font-size: 5vh;
+  font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
+  font-weight: 980;
+  text-shadow: 2px 3px 0px #898999;
+  line-height: 1.2;
+}
+/* .update::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  border-top: 20px solid rgb(209, 159, 22);
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  right: calc(50% - 20px);
+} */
+
+/* Nuevo encabezado */
+.form_header {
+  /* display: table-cell;
+  vertical-align: middle; */
+  /* font-weight: lighter;
+  margin-block-end: 20px; */
+  /* width: 100%;
+  display: flex;
+  justify-content: space-between; */
+  /* align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box; */
+}
+
+.titulo {
+  color: rgb(21, 209, 209);
+  animation-name: fund_changes_text;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  position: relative;
+}
+
+@keyframes fund_changes_text {
+  0% {
+    color: rgb(27, 167, 223);
+  }
+  25% {
+    color: rgb(210, 231, 16);
+  }
+  75% {
+    color: rgb(231, 134, 23);
+  }
+  80% {
+    color: rgb(189, 42, 111);
+  }
+  100% {
+    color: rgb(42, 189, 157);
+  }
+}
