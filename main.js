@@ -1,26 +1,6 @@
 //Array que contiene los datos DEl crud
 let usersList = [];
 
-// >>>>>>> ARRAY a CONSIDERAR [] <
-    // {
-    //     name: "Mazda 2",
-    //     model: "2019",
-    //     doors: 5,
-    //     color: "Red",
-    //     brand: "Mazda",
-    //     email:"academlo@academlo",
-    // },
-    // {
-    //     name: "Mazda 2",
-    //     model: "2019",
-    //     doors: 5,
-    //     color: "Red",
-    //     brand: "Mazda",
-    //     email:"academlo@academlo",
-    // },
-  
-  // ];
-  
   //Para saber si se crea o se edita
   let updateFlag = false;
   let updateIndex = null;
@@ -39,7 +19,7 @@ let usersList = [];
   // >>>>>>>>>>>>>>> Funcion para guardar en LocalStorage (NEW!!!) <<<<<<<<<<<<<<<<<<<
   const userStorage = () => {
 
-    if (typeof Storage !== "undefined") {
+    if ( typeof Storage !== "undefined") {
       localStorage.setItem ("userStorageArray", JSON.stringify(usersList));
       renderList();
       } else {
@@ -61,7 +41,7 @@ let usersList = [];
         userListArray = [];    
       } else { 
        //RECORRER EL ARRAY PARA MOSTRAR CADA ELEMENTO DEL MISMO
-    userListArray.forEach((user, index) => {
+      userListArray.forEach((user, index) => {
       //Creamos el contenedor principal que va a ser la fila de cada usuario
       const userItemDiv = document.createElement("div");
       userItemDiv.setAttribute("class", "userItem");
@@ -115,14 +95,14 @@ let usersList = [];
       deleteBtn.setAttribute("class", "delete");
       deleteBtn.addEventListener("click", () => deleteUser(index));
       deleteBtn.innerHTML = "Eliminar";
-      deleteBtn.innerHTML = "Eliminar";
       deleteBtn.setAttribute("id", "delete");
   
       //Agregamos el botón al div de botones creado anteriormente
       actionButtons.appendChild(updateBtn);
       actionButtons.appendChild(deleteBtn);
       
-    });
+      });
+    }
   };
   
   //Función que crea y actualiza según la variable updateFlag, cuando la función edite, editará el registro ...
@@ -166,18 +146,10 @@ let usersList = [];
       if(localUsersList === null) {
           localUsersList = [];
       }
-
       usersList.push(...localUsersList, user);
       userStorage();
       renderList();
-
-      // >>>>>>>> Lo antes Considerado!!! <<<<<<<
-      // //Agregamos este nuevo objeto al array
-      // usersList.push(user);
-      // //Pintar el array nuevo
-      // renderList();
     }
-  
     //Dejar los valores de los inputs vacíos
     userForm.reset();
   };
@@ -185,7 +157,7 @@ let usersList = [];
   //FUNCIÓN PARA RECIBIR LOS VALORES DEL USUARIO QUE RECIBIÓ EL CLICK
   const updateUser = (index, user) => {
     console.log(index);
-    console.log(userM);
+    console.log(user);
     //PONEMOS LOS VALORES QUE TIENE EL USER EN EL FORMULARIO QUE ANTERIORMENTE ESTABA VACÍO
     document.getElementById("name").value = user.name;
     document.getElementById("model").value = user.model;
@@ -202,7 +174,11 @@ let usersList = [];
   
   //FUNCION QUE RECIBE EL INDEX (POSICIÓN DEL ELEMENTO DADA POR FOREACH) PARA BORRAR EL ELEMENTO EN ESA POSICIOÓN
   const deleteUser = index => {
-    usersList = JSON.parse(localStorage.getItem("userStorageArray"));
+    console.log(index);
+    let deleteUserStorage = JSON.parse(localStorage.getItem("userStorageArray"));
+    usersList = deleteUserStorage;
+
+    // usersList = JSON.parse(localStorage.getItem("userStorageArray"));
     //METODO PARA QUITAR UN ELEMENTO DE UN ARRAY
     usersList.splice(index, 1);
     userStorage();
