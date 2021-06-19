@@ -21,7 +21,7 @@ body {
 /* TÍTULO DE LA APP */
 
 .titulo {
-  font-size: 2em;
+  font-size: 1.7em;
   font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
   text-shadow: 2px 3px 0px #9696a4;
   color: rgb(213, 226, 226);
@@ -48,7 +48,7 @@ body {
 
 .publicidad {
   /* modificar unidad de medidas por "EM" */
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
   cursor: pointer;
 }
@@ -113,7 +113,7 @@ form {
   font-weight: lighter;
   color: rgb(248, 236, 236);
   border-radius: 10em;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 /* Texto interior de Input */
 .field input {
@@ -134,7 +134,7 @@ form {
   background-color: #515851b6;
   color: #fff;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1.3em;
   margin-top: 20px;
   border-radius: 20px;
   -webkit-border-radius: 10px;
@@ -178,7 +178,8 @@ h4 {
   justify-content: center;
   align-items: center;
   color: rgb(53, 46, 46);
-  font-size: 1.1em;
+  font-size: 0.7em;
+  font-style: italic;
 }
 /* Div de Botones Editar y Eliminar */
 .actions {
@@ -203,7 +204,7 @@ h4 {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.6em;
 }
 /* boton de eliminar */
 .delete {
@@ -213,7 +214,7 @@ h4 {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.6em;
 }
 
 /* CAJA PADRE - 1*/
@@ -227,7 +228,7 @@ input {
   width: 100%;
   background: rgba(191, 201, 196, 0.699);
   color: black;
-  font-size: 1em;
+  font-size: 0.8em;
   padding: 10px 10px 10px 5px;
 }
 
@@ -235,5 +236,5 @@ input:focus {
   outline: none;
   background-color: rgba(61, 56, 56, 0.823);
   color: rgb(243, 243, 243);
-  font-size: 1.3em;
+  font-size: 0.3em;
 }

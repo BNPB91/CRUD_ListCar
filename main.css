@@ -29,6 +29,11 @@
   animation-delay: 0s;
 }
 
+.titulo:hover {
+  animation-name: fund_changes_text;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
 /* Funcion de Cambio de Fondo - Colores */
 @keyframes fund_changes_background {
   0% {
