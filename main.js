@@ -9,8 +9,9 @@ let usersList = [];
   let userListUI = document.getElementById("userList");
   //Variable que va a guardar el formulario
   const userForm = document.getElementById("addUser");
-  
-  
+// }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+// }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} 
 
 
   // <<<<<<<<<<<<<< Variable asignacion de valor JSON>>>>>>>>>>>>
@@ -146,11 +147,12 @@ let usersList = [];
       if(localUsersList === null) {
           localUsersList = [];
       }
+      // ... = superador de propagacion (spread operator) guardar copia identica 
       usersList.push(...localUsersList, user);
       userStorage();
       renderList();
     }
-    //Dejar los valores de los inputs vacíos
+    //Dejar los valores de los inputs vacíos (todo en Blanco)
     userForm.reset();
   };
   
@@ -175,6 +177,7 @@ let usersList = [];
   //FUNCION QUE RECIBE EL INDEX (POSICIÓN DEL ELEMENTO DADA POR FOREACH) PARA BORRAR EL ELEMENTO EN ESA POSICIOÓN
   const deleteUser = index => {
     console.log(index);
+    // ultima version de localStorage
     let deleteUserStorage = JSON.parse(localStorage.getItem("userStorageArray"));
     usersList = deleteUserStorage;
 
@@ -189,4 +192,5 @@ let usersList = [];
   //PARA CREAR ELEMENTOS PRIMERO ESCUCHAMOS CUANDO EL FORMULARIO SE ENVÍO Y EJECUTAMOS UNA FUNCIÓN PARA AGREGAR ELEMENTOS AL ARRAY
   userForm.addEventListener("submit", createUpdateUser);
   //UNA VEZ QUE CARGUE LA PÁGINA, PINTE EL ARRAY
+  // Fundion del documento ejecute una funcion , cuando este termine de cargar.
   document.addEventListener("DOMContentLoaded", renderList);

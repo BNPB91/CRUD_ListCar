@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+/* GLOBAL */
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Architects Daughter", cursive;
+}
+/* Cuerpo de la Pag */
+body {
+  background-color: rgb(49, 45, 45);
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+/* TÍTULO DE LA APP */
+
+.titulo {
+  font-size: 2em;
+  font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
+  text-shadow: 2px 3px 0px #9696a4;
+  color: rgb(213, 226, 226);
+  animation-name: fund_changes_text;
+  animation-duration: 5s;
+  justify-self: start;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  display: block;
+  font-style: italic;
+}
+
+.title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+
+/* Sub titulo en movimiento */
+
+.publicidad {
+  /* modificar unidad de medidas por "EM" */
+  font-size: 1em;
+  font-family: "Gotham-Book", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+
+h3 marquee {
+  color: rgba(209, 214, 209, 0.782);
+  font-style: italic;
+}
+
+/* ----- FORMULARIOS PARA AGREGAR USUARIO ----  */
+/* Caja de formulario de Imputs */
+form {
+  margin: auto;
+  align-self: center;
+  background-image: linear-gradient(
+    to top,
+    #b74545,
+    #bd4d3e,
+    #c25736,
+    #c5612d,
+    #c66c23,
+    #ca711d,
+    #ce7616,
+    #d27b0b,
+    #dc7a05,
+    #e67801,
+    #f07500,
+    #fb7200
+  );
+  border-radius: 20px;
+  max-height: 95%;
+  padding: 10px;
+  box-shadow: 0px 0px 1000px 0px rgb(179, 30, 30);
+}
+
+/* Caja Padre de Imput */
+#addUser {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+/* Caja Hijo de Input */
+.addUser {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+/* Div de Input */
+.field {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+/* Titulos de Input */
+.field label {
+  margin-bottom: 10px;
+  font-weight: lighter;
+  color: rgb(248, 236, 236);
+  border-radius: 10em;
+  font-size: 1.5em;
+}
+/* Texto interior de Input */
+.field input {
+  border: 1px solid #afb5b9;
+  padding: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+/* Botones : Guardar - Editar - Eliminar */
+.submitBtn,
+.updateBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #515851b6;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+/*----- LISTADO DE USUARIOS -----*/
+
+/* Caja Padre User New */
+
+.userList {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(233, 224, 224);
+  border-radius: 10px;
+  border-style: solid rgb(131, 22, 22);
+}
+/*Caja de Texto agregado y Botonos de Editar & Eliminar */
+.userItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.userInfo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h4 {
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(53, 46, 46);
+  font-size: 1.1em;
+}
+/* Div de Botones Editar y Eliminar */
+.actions {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botones de editar y eliminar */
+.actions button {
+  width: 45%;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+/* boton de editar */
+.update {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+/* boton de eliminar */
+.delete {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+/* CAJA PADRE - 1*/
+
+/* .field {
+  width: 100%;
+  margin: auto;
+  position: relative;
+} */
+input {
+  width: 100%;
+  background: rgba(191, 201, 196, 0.699);
+  color: black;
+  font-size: 1em;
+  padding: 10px 10px 10px 5px;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(61, 56, 56, 0.823);
+  color: rgb(243, 243, 243);
+  font-size: 1.3em;
+}
